@@ -3,10 +3,8 @@
 body{
 	margin: 0 auto;
 	font-family: 'Jost', sans-serif;
-	/*color: #ffffff;*/
 	position:relative;
 	background: #6081ff;
-	/*background: linear-gradient(180deg, #ffeeef 3%, #f8e2fd 48%, #ecaefb 80%);*/
 	background: linear-gradient(180deg, #f6fdff 3%, #ffc7dc 48%, #deffdd 80%);
 	
 }
