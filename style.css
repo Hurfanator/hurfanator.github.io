@@ -1,0 +1,690 @@
+/* CSS code may need a tidy up at some point.  Most of the code is still required. */
+
+body{
+	margin: 0 auto;
+	font-family: 'Jost', sans-serif;
+	/*color: #ffffff;*/
+	position:relative;
+	background: #6081ff;
+	/*background: linear-gradient(180deg, #ffeeef 3%, #f8e2fd 48%, #ecaefb 80%);*/
+	background: linear-gradient(180deg, #f6fdff 3%, #ffc7dc 48%, #deffdd 80%);
+	
+}
+
+
+/*--------------- BACKGROUNDS ---------------*/
+
+
+.wave-container{
+    background-image: url(images/site_backgrounds/long_white_wave.svg);
+    background-size: cover;
+    position: absolute;
+    z-index: -5;
+    bottom: 950px;
+    width: 100%;
+    height: 100vh;
+}
+
+/*--------------- TYPOGRAPHY & TYPE COLOURS ---------------*/
+
+
+:root{
+	--primary-heading:#0c0075;
+	--nav-links:#3e3e3e;
+	--secondary-purple:#a34bed;
+	--not-quite-black:#3e3e3e;
+}
+
+
+h1, h2 {
+	color: var(--primary-heading);
+    font-weight: 300;
+}
+
+h3 {
+	    font-weight: 300;
+
+}
+
+.section-header {
+font-size:2em;
+    margin: 2em 0em;
+}
+
+.big-heading {
+	font-size: 2.8em;
+	color: var(--primary-heading);
+    margin-bottom: -5px;
+}
+
+.job-title{
+	color:var(--primary-heading)
+}
+
+/*--------------- LAYOUT ---------------*/
+
+
+.site-wrapper{
+margin-left:auto;
+margin-right:auto;
+max-width:1300px;
+}
+
+.section-container {
+margin: 2em;
+}
+
+
+
+/*--------------- NAVs ---------------*/
+
+header{
+height:5em;
+}
+
+nav{
+	display:flex;
+	justify-content:space-between;
+	text-transform:uppercase;
+	position:fixed;
+	background:white;
+	top:0;
+	left:0;
+	width:100%;
+	padding:0em 1em;
+	z-index:10;	
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--nav-links);
+    margin-left: 5em;
+    letter-spacing: 0.1em;
+}
+
+nav a:hover{
+	color: var(--secondary-purple);
+}
+
+
+.logo{
+	padding-left:1em;
+	  letter-spacing: 0.1em;
+	    color: var(--nav-links);
+	   font-weight: 400;
+
+}
+
+svg.svg-inline--fa.fa-instagram.fa-w-14 {
+	width:25px;
+}
+
+/*--------------- MOBILE NAV ---------------*/
+
+
+.mobile-nav-overlay{
+	font-size:1.2rem;
+	 display: flex;
+    flex-direction: column;
+		list-style-type: none;
+	position:absolute;
+	padding:2em 10em 1em 3em;
+	background:white;
+	top:40px;
+	transition: opacity .4s, 
+		        transform .2s ease-in-out .1s;
+	transform: scaleX(0);
+	transform-origin:right;
+	opacity:0;
+	right:0px;
+	z-index:10;
+
+	
+}
+
+.mobile-nav-overlay svg.svg-inline--fa.fa-instagram.fa-w-14 {
+	    left: 20px;
+    position: relative;
+}
+
+.mobile-nav-overlay li {
+	padding:.5em;
+	margin:.5em;
+	text-align:left;
+}
+
+.mobile-nav-active {
+	opacity: 1;
+    transition:opacity .2s,  transform .3s ease-in-out .1s;
+    transform: scaleX(1);
+}
+
+/*--------------- DESKTOP NAV ---------------*/
+
+
+.desktop-nav {
+	display:none;
+	list-style-type: none;
+	align-items:center;
+	padding-right:4em;
+}
+
+
+/*--------------- HAMBURGER ---------------*/
+
+button.hamburger {
+	border: none;
+    background: none;
+	padding:2em 3em;
+	cursor:pointer;
+}
+
+.burger-line{
+	width:30px;
+	border-bottom:4px solid black;
+	border-radius:5px;
+}
+
+.burger-line2{
+	margin: 0.5em 0em;
+}
+
+
+/*--------------- INTRO SECTION ---------------*/
+
+
+.intro-container {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+		
+}
+
+.intro-content p {
+	    max-width: 500px;
+    font-size: 1.3em;
+    color: var(--not-quite-black);
+}
+
+
+.hatbox{
+	display: none;
+}
+
+
+/*--------------- INTRO SECTION IMAGES ---------------*/
+
+
+.hatbox img {
+    height: 5rem;
+    margin: 0.8em;
+	cursor:grab;
+	z-index:9;
+	
+	
+}
+
+.hatbox img:active{
+cursor:grabbing}
+
+.headshot-container {
+	background-image: url("images/headshot.jpg");
+    transform: translate3d(0px, 3px, 0px);
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 350px;
+	transition: all 3s cubic-bezier(0.26, 1.48, 0.47, 0.96);
+	
+}
+
+/*--------------- NEW PROJECTS SECTION ---------------*/
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between items */
+}
+
+.project-item {
+    text-align: center; /* Center align captions */
+}
+
+.project-image {
+    width: 50%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+	max-width: 100%;
+}
+
+/*--------------- OLD PROJECT SECTION ---------------*/
+
+#project-container{
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card{
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    margin: 0.8em;
+width: 370px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+	padding:0.4em;
+}
+
+.project-img-container {
+	height: 240px;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+}
+
+.project-img-container:hover {
+    filter: saturate(2.5);
+}
+	/*--------------- PROJECT CARD BG IMAGES---------------*/
+
+
+#project-card1 .project-img-container {
+	background-image:url(images/projects/countryApp_screenshot.png);
+}
+
+#project-card2 .project-img-container {
+	background-image:url(images/projects/activity-cat.png)
+}
+
+#project-card3 .project-img-container  {
+	background-image:url(images/projects/todo-screenshot.png)
+}
+
+#project-card4 .project-img-container  {
+	background-image:url(images/projects/8ball.png)
+}
+
+#project-card5 .project-img-container  {
+	background-image:url(images/projects/pacman-screenshot.png)
+}
+
+#project-card6 .project-img-container {
+	background-image:url(images/projects/murder-mystery-screenshot.png)
+}
+
+
+
+.project-img-container img{
+	width:100%;
+}
+
+.project-info-container{
+	margin:1em;
+}
+.project-title{
+	text-transform:uppercase;
+}
+
+.project-icons-container{
+	    display: flex;
+    justify-content: flex-end;
+    margin: 1.5em 1em;
+	    align-items: center;
+
+}
+
+.project-link{
+	padding: .5em 1em;
+      text-decoration: none;
+    margin-left: 1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    background: #e5dfff;
+    z-index: 1;
+    color: black;
+	cursor:pointer;
+
+}
+.project-link:hover {
+	   background: #7a5cf8;
+	color:white;
+	
+}
+
+.project-link:hover img.project-icon {
+  filter: brightness(50);
+}
+
+
+.project-link:after{
+	  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #a34bed;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease;
+}
+
+.project-icon {
+	    height: 1.6rem;
+    margin-right: 1rem;
+    display: block;
+    float: left;
+}
+/*--------------- TOOLS SECTION ---------------*/
+
+
+.tools img {
+	width:auto;
+    height: 70px;
+}
+
+.tools-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    padding: 0.5em;
+	justify-content:center;
+}
+
+.tool-title{
+margin-top:1em;
+	text-transform:uppercase;
+}
+	
+
+.tools-list li {
+	width: 6em;
+    align-items:center;
+	display:flex;
+    margin: 1.2em;
+	flex-direction:column;
+}
+
+
+/*--------------- EXPERIENCE SECTION ---------------*/
+
+/*TIMELINE*/
+
+.timeline-container {
+	position:relative;
+	margin-top:5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.experience-list{
+	display: flex;
+	    margin-bottom: 3em;
+}
+
+.radio-year input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.radio-year{
+	position:relative;
+	width: 4em;
+	cursor: pointer;
+
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+label.radio-year:after {
+ content: "";
+    height: 2px;
+    width: inherit;
+    position: absolute;
+	    top: 6px;
+background:#ffffff;
+}
+
+.custom-bullet{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+ border: 1px solid white;
+	background:#ebb8fb;
+	z-index: 1;
+}
+
+.hidden {
+	  visibility: hidden;
+	position:absolute;
+}
+.radio-year input:checked ~ .custom-bullet {
+  background-color: #ffffff;
+}
+
+.custom-bullet:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.experience-list > label:nth-child(5):after {
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 100%);
+}
+
+.experience-details li {
+    margin-bottom: .5em;}
+
+.year {
+	bottom: 0.5em;
+    position: absolute;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+
+.job-panel {
+    padding: 10px 20px;
+    background: rgb(255 255 255 / 96%);
+    border-radius: 10px;
+    line-height: 20px;
+    z-index: 10;
+}
+
+
+/*--------------- DESIGN SECTION---------------*/
+
+.design-container {
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	}
+
+.design-info-container {
+	margin:2em;
+}
+
+article.project-card.design-project{
+	height:unset;
+}
+.carousel-container {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+	
+}
+
+
+.slide img {
+	width:100%;
+}
+
+.slick-arrow {
+    position:absolute;
+    z-index:10;
+    width:50px;
+    margin:0.5em;
+    top:42%;
+	cursor:pointer;
+}
+
+.slick-prev{
+	left:0;
+}
+.slick-next{
+	right:0;
+}
+/*--------------- FOOTER ---------------*/
+
+
+footer{
+	    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .08em;
+	text-transform:uppercase;
+	color:#fff;
+}
+
+
+
+/*--------------- MEDIA QUERIES ---------------*/
+
+
+/* Mobile Portrait Size to Tablet Landscape and Desktop */
+
+@media (min-width:780px){
+		.intro-container {
+		flex-direction: row;
+	}
+	
+	.section-header{
+	margin: 2em 0em 2em 2em;
+
+	}
+/*	timeline section media query*/
+	
+	.timeline-container{
+    justify-content: unset;
+    width: 700px;
+    align-items: unset;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+		flex-direction: row;
+	}
+
+	.experience-list {
+    flex-direction: column;
+		width: 150px;
+		margin-right: 3em;
+}
+	.radio-year {
+    width: 0;
+    height: 6em;
+}
+	.job-panel{
+		   margin-left: 3em;
+	}
+	
+	.panel-container {
+    min-width: 700px;
+    max-width: 750px;
+	}
+	label.radio-year:after {
+    width: 2px;
+    height: inherit;
+    left: 7px;
+    top: 0px;
+}
+	.year{
+		margin-left: 1.5em;
+		bottom: unset;
+	}
+	
+	/*	design section media query*/
+	.design-container{
+		display:unset;
+	}
+	.design-project {
+    display: flex;
+		width: unset;
+}
+	.design-project-images{
+		width:60%;
+	}
+	.carousel-container {
+		max-width: unset;}
+	
+	.design-info-container{
+		margin-right:2em;
+	}
+	
+}
+
+@media (min-width:650px) {
+	
+.hamburger{
+		display:none;
+	}
+	
+	.desktop-nav{
+		display:flex;
+	}
+	
+	.mobile-nav-overlay{
+		display:none;
+	}
+	
+	
+	.intro-content {
+	    margin-right: 2em;
+}
+	
+	
+	.headshot-container{
+	min-width: 400px;
+    right: 0;
+    top: 80px;
+	height: 600px;
+}
+	
+	.hatbox{
+		display:block;
+	}
+	
+	.project{
+		min-width:350px;
+		width:50%;
+	}
+
+
+}
+
