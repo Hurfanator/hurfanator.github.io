@@ -245,7 +245,7 @@ button.hamburger {
 /* Mobile view for caption */
 @media (max-width: 600px) { 
     .headshot-caption {
-        margin-top: 16px;
+        margin-top: 5px;
     }
 }
 
