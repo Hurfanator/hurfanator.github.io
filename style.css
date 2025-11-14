@@ -217,33 +217,36 @@ button.hamburger {
 }
 
 .headshot-container {
-	background-image: url("images/headshot.jpg");
-    transform: translate3d(0px, 3px, 0px);
-    margin-bottom: 30px;
-    position: relative;
-    top: 0;
-	background-size: cover;
-    background-position: center center;
+    background-image: url("images/headshot.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 350px;
-	transition: all 3s cubic-bezier(0.26, 1.48, 0.47, 0.96);
+
+    width: 100%;
+    max-width: 350px;   
+    height: 350px;       
+
+    margin-bottom: 0px;
+    position: relative;
+
+    transition: all 3s cubic-bezier(0.26, 1.48, 0.47, 0.96);
 }
 
-/*--------------- WRAPPER FOR PROPER CAPTION ALIGNMENT ---------------*/
-
-.headshot-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 100%;
-}
+/*--------------- HEADSHOT CAPTION ALIGNMENT ---------------*/
 
 .headshot-caption {
-	text-align: center;
-	font-size: 1.1em;
-	color: var(--not-quite-black);
-	margin-top: 60px;
-	max-width: 400px;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--not-quite-black);
+    margin-top: 85px;   /* desktop spacing */
+    max-width: 400px;
+}
+
+/* Mobile view for caption */
+@media (max-width: 600px) { 
+    .headshot-caption {
+        margin-top: 16px;
+    }
 }
 
 /*--------------- NEW PROJECTS SECTION ---------------*/
