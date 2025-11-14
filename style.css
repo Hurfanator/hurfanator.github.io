@@ -6,7 +6,6 @@ body{
 	position:relative;
 	background: #6081ff;
 	background: linear-gradient(180deg, #f6fdff 3%, #ffc7dc 48%, #deffdd 80%);
-	
 }
 
 
@@ -41,7 +40,6 @@ h1, h2 {
 
 h3 {
 	    font-weight: 300;
-
 }
 
 .section-header {
@@ -104,13 +102,11 @@ nav a:hover{
 	color: var(--secondary-purple);
 }
 
-
 .logo{
 	padding-left:1em;
-	  letter-spacing: 0.1em;
-	    color: var(--nav-links);
-	   font-weight: 400;
-
+	letter-spacing: 0.1em;
+	color: var(--nav-links);
+	font-weight: 400;
 }
 
 svg.svg-inline--fa.fa-instagram.fa-w-14 {
@@ -122,9 +118,9 @@ svg.svg-inline--fa.fa-instagram.fa-w-14 {
 
 .mobile-nav-overlay{
 	font-size:1.2rem;
-	 display: flex;
-    flex-direction: column;
-		list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
 	position:absolute;
 	padding:2em 10em 1em 3em;
 	background:white;
@@ -136,13 +132,11 @@ svg.svg-inline--fa.fa-instagram.fa-w-14 {
 	opacity:0;
 	right:0px;
 	z-index:10;
-
-	
 }
 
 .mobile-nav-overlay svg.svg-inline--fa.fa-instagram.fa-w-14 {
-	    left: 20px;
-    position: relative;
+	left: 20px;
+	position: relative;
 }
 
 .mobile-nav-overlay li {
@@ -195,15 +189,13 @@ button.hamburger {
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
-		
 }
 
 .intro-content p {
-	    max-width: 500px;
-    font-size: 1.3em;
-    color: var(--not-quite-black);
+	max-width: 500px;
+	font-size: 1.3em;
+	color: var(--not-quite-black);
 }
-
 
 .hatbox{
 	display: none;
@@ -218,12 +210,11 @@ button.hamburger {
     margin: 0.8em;
 	cursor:grab;
 	z-index:9;
-	
-	
 }
 
 .hatbox img:active{
-cursor:grabbing}
+	cursor:grabbing;
+}
 
 .headshot-container {
 	background-image: url("images/headshot.jpg");
@@ -236,30 +227,48 @@ cursor:grabbing}
     background-repeat: no-repeat;
     height: 350px;
 	transition: all 3s cubic-bezier(0.26, 1.48, 0.47, 0.96);
-	
 }
 
-/*--------------- NEW PROJECTS SECTION ---------------*/
-#project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 20px; /* Space between items */
-}
+/*--------------- WRAPPER FOR PROPER CAPTION ALIGNMENT ---------------*/
 
-.project-item {
-    text-align: center; /* Center align captions */
-}
-
-.project-image {
-    width: 50%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+.headshot-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	max-width: 100%;
 }
 
-/*--------------- OLD PROJECT SECTION ---------------*/
+.headshot-caption {
+	text-align: center;
+	font-size: 0.9rem;
+	color: #000000;
+	margin-top: 60px;
+	max-width: 350px;
+}
+
+/*--------------- NEW PROJECTS SECTION ---------------*/
+
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-item {
+    text-align: center;
+}
+
+.project-image {
+    width: 50%;
+    height: auto;
+	max-width: 100%;
+}
+
+/*--------------- OLD PROJECTS SECTION ---------------*/
+
 
 #project-container{
-      display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -269,7 +278,7 @@ cursor:grabbing}
     border: 1px solid #dcdcdc;
     background: #ffffff;
     margin: 0.8em;
-width: 370px;
+    width: 370px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
@@ -286,9 +295,8 @@ width: 370px;
 .project-img-container:hover {
     filter: saturate(2.5);
 }
-	/*--------------- PROJECT CARD BG IMAGES---------------*/
 
-
+/* Project card images */
 #project-card1 .project-img-container {
 	background-image:url(images/projects/countryApp_screenshot.png);
 }
@@ -313,8 +321,6 @@ width: 370px;
 	background-image:url(images/projects/murder-mystery-screenshot.png)
 }
 
-
-
 .project-img-container img{
 	width:100%;
 }
@@ -322,21 +328,21 @@ width: 370px;
 .project-info-container{
 	margin:1em;
 }
+
 .project-title{
 	text-transform:uppercase;
 }
 
 .project-icons-container{
-	    display: flex;
-    justify-content: flex-end;
-    margin: 1.5em 1em;
-	    align-items: center;
-
+	display: flex;
+	justify-content: flex-end;
+	margin: 1.5em 1em;
+	align-items: center;
 }
 
 .project-link{
 	padding: .5em 1em;
-      text-decoration: none;
+    text-decoration: none;
     margin-left: 1em;
     border-radius: 5px;
     text-transform: uppercase;
@@ -346,39 +352,38 @@ width: 370px;
     z-index: 1;
     color: black;
 	cursor:pointer;
-
 }
+
 .project-link:hover {
-	   background: #7a5cf8;
+	background: #7a5cf8;
 	color:white;
-	
 }
 
 .project-link:hover img.project-icon {
   filter: brightness(50);
 }
 
-
 .project-link:after{
-	  content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #a34bed;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .2s ease;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: #a34bed;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .2s ease;
 }
 
 .project-icon {
-	    height: 1.6rem;
-    margin-right: 1rem;
-    display: block;
-    float: left;
+	height: 1.6rem;
+	margin-right: 1rem;
+	display: block;
+	float: left;
 }
+
 /*--------------- TOOLS SECTION ---------------*/
 
 
@@ -400,10 +405,9 @@ width: 370px;
 }
 
 .tool-title{
-margin-top:1em;
+	margin-top:1em;
 	text-transform:uppercase;
 }
-	
 
 .tools-list li {
 	width: 6em;
@@ -416,8 +420,6 @@ margin-top:1em;
 
 /*--------------- EXPERIENCE SECTION ---------------*/
 
-/*TIMELINE*/
-
 .timeline-container {
 	position:relative;
 	margin-top:5em;
@@ -425,73 +427,73 @@ margin-top:1em;
 	flex-direction: column;
 	align-items: center;
 }
+
 .experience-list{
 	display: flex;
-	    margin-bottom: 3em;
+	margin-bottom: 3em;
 }
 
 .radio-year input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-
 }
 
 .radio-year{
 	position:relative;
 	width: 4em;
 	cursor: pointer;
-
 }
 
 .panel-container {
     display: flex;
     justify-content: center;
-
 }
 
 label.radio-year:after {
- content: "";
-    height: 2px;
-    width: inherit;
-    position: absolute;
-	    top: 6px;
-background:#ffffff;
+	content: "";
+	height: 2px;
+	width: inherit;
+	position: absolute;
+	top: 6px;
+	background:#ffffff;
 }
 
 .custom-bullet{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
- border: 1px solid white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	border: 1px solid white;
 	background:#ebb8fb;
 	z-index: 1;
 }
 
 .hidden {
-	  visibility: hidden;
+	visibility: hidden;
 	position:absolute;
 }
+
 .radio-year input:checked ~ .custom-bullet {
-  background-color: #ffffff;
+	background-color: #ffffff;
 }
 
 .custom-bullet:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 .experience-list > label:nth-child(5):after {
     background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 100%);
 }
 
 .experience-details li {
-    margin-bottom: .5em;}
+    margin-bottom: .5em;
+}
 
 .year {
 	bottom: 0.5em;
@@ -517,7 +519,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 1
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-	}
+}
 
 .design-info-container {
 	margin:2em;
@@ -526,130 +528,132 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 1
 article.project-card.design-project{
 	height:unset;
 }
-.carousel-container {
-  max-width: 450px;
-  position: relative;
-  margin: auto;
-	
-}
 
+.carousel-container {
+	max-width: 450px;
+	position: relative;
+	margin: auto;
+}
 
 .slide img {
 	width:100%;
 }
 
 .slick-arrow {
-    position:absolute;
-    z-index:10;
-    width:50px;
-    margin:0.5em;
-    top:42%;
+	position:absolute;
+	z-index:10;
+	width:50px;
+	margin:0.5em;
+	top:42%;
 	cursor:pointer;
 }
 
 .slick-prev{
 	left:0;
 }
+
 .slick-next{
 	right:0;
 }
+
+
 /*--------------- FOOTER ---------------*/
 
-
 footer{
-	    padding: 2em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	padding: 2em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer a{
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: .08em;
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: .08em;
 	text-transform:uppercase;
 	color:#fff;
 }
 
 
-
 /*--------------- MEDIA QUERIES ---------------*/
 
 
-/* Mobile Portrait Size to Tablet Landscape and Desktop */
-
 @media (min-width:780px){
-		.intro-container {
+	.intro-container {
 		flex-direction: row;
 	}
 	
 	.section-header{
-	margin: 2em 0em 2em 2em;
-
+		margin: 2em 0em 2em 2em;
 	}
-/*	timeline section media query*/
 	
 	.timeline-container{
-    justify-content: unset;
-    width: 700px;
-    align-items: unset;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
+		justify-content: unset;
+		width: 700px;
+		align-items: unset;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 800px;
 		flex-direction: row;
 	}
 
 	.experience-list {
-    flex-direction: column;
+		flex-direction: column;
 		width: 150px;
 		margin-right: 3em;
-}
+	}
+
 	.radio-year {
-    width: 0;
-    height: 6em;
-}
+		width: 0;
+		height: 6em;
+	}
+
 	.job-panel{
-		   margin-left: 3em;
+		margin-left: 3em;
 	}
 	
 	.panel-container {
-    min-width: 700px;
-    max-width: 750px;
+		min-width: 700px;
+		max-width: 750px;
 	}
+
 	label.radio-year:after {
-    width: 2px;
-    height: inherit;
-    left: 7px;
-    top: 0px;
-}
+		width: 2px;
+		height: inherit;
+		left: 7px;
+		top: 0px;
+	}
+
 	.year{
 		margin-left: 1.5em;
 		bottom: unset;
 	}
-	
-	/*	design section media query*/
+
 	.design-container{
 		display:unset;
 	}
+
 	.design-project {
-    display: flex;
+		display: flex;
 		width: unset;
-}
+	}
+
 	.design-project-images{
 		width:60%;
 	}
+
 	.carousel-container {
-		max-width: unset;}
+		max-width: unset;
+	}
 	
 	.design-info-container{
 		margin-right:2em;
 	}
-	
 }
 
 @media (min-width:650px) {
 	
-.hamburger{
+	.hamburger{
 		display:none;
 	}
 	
@@ -661,18 +665,16 @@ footer a{
 		display:none;
 	}
 	
-	
 	.intro-content {
-	    margin-right: 2em;
-}
-	
+		margin-right: 2em;
+	}
 	
 	.headshot-container{
-	min-width: 400px;
-    right: 0;
-    top: 80px;
-	height: 600px;
-}
+		min-width: 400px;
+		right: 0;
+		top: 80px;
+		height: 600px;
+	}
 	
 	.hatbox{
 		display:block;
@@ -682,7 +684,4 @@ footer a{
 		min-width:350px;
 		width:50%;
 	}
-
-
 }
-
