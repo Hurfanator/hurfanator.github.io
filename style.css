@@ -240,10 +240,10 @@ button.hamburger {
 
 .headshot-caption {
 	text-align: center;
-	font-size: 0.9rem;
-	color: #000000;
+	font-size: 1.1em;
+	color: var(--not-quite-black);
 	margin-top: 60px;
-	max-width: 350px;
+	max-width: 400px;
 }
 
 /*--------------- NEW PROJECTS SECTION ---------------*/
