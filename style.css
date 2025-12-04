@@ -197,7 +197,7 @@ button.hamburger {
 	color: var(--not-quite-black);
 }
 
-.hatbox{
+.motherboard{
 	display: none;
 }
 
@@ -205,14 +205,14 @@ button.hamburger {
 /*--------------- INTRO SECTION IMAGES ---------------*/
 
 
-.hatbox img {
+.motherboard img {
     height: 5rem;
     margin: 0.8em;
 	cursor:grab;
 	z-index:9;
 }
 
-.hatbox img:active{
+.motherboard img:active{
 	cursor:grabbing;
 }
 
@@ -299,30 +299,7 @@ button.hamburger {
     filter: saturate(2.5);
 }
 
-/* Project card images */
-#project-card1 .project-img-container {
-	background-image:url(images/projects/countryApp_screenshot.png);
-}
 
-#project-card2 .project-img-container {
-	background-image:url(images/projects/activity-cat.png)
-}
-
-#project-card3 .project-img-container  {
-	background-image:url(images/projects/todo-screenshot.png)
-}
-
-#project-card4 .project-img-container  {
-	background-image:url(images/projects/8ball.png)
-}
-
-#project-card5 .project-img-container  {
-	background-image:url(images/projects/pacman-screenshot.png)
-}
-
-#project-card6 .project-img-container {
-	background-image:url(images/projects/murder-mystery-screenshot.png)
-}
 
 .project-img-container img{
 	width:100%;
@@ -679,7 +656,7 @@ footer a{
 		height: 600px;
 	}
 	
-	.hatbox{
+	.motherboard{
 		display:block;
 	}
 	
