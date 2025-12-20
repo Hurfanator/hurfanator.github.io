@@ -1,2 +1,7 @@
 # hurfanator.github.io
- Website
+Hurfanator's Website
+============
+
+Quick Start
+-----------
+https://hurfanator.github.io/
