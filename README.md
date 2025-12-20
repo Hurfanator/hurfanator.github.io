@@ -1,4 +1,3 @@
-# hurfanator.github.io
 Hurfanator's Website
 ============
 
